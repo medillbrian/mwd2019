@@ -1,0 +1,14 @@
+#container {
+    display:grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header"
+        "main   sidebar"
+        "box    sidebar"
+        "box    second"
+        "most   most"
+        "more   more"
+        "sidebar2   sidebar2"
+        "footer footer";
+}
