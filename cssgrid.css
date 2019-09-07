@@ -1,0 +1,44 @@
+#header {
+    grid-area: header;
+    background-color:aqua;
+}
+
+#main {
+    grid-area: main;
+    background-color:aquamarine;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background-color:burlywood;
+}
+
+#sidebar2 {
+    grid-area: sidebar2;
+    background-color:darksalmon;
+}
+
+#second {
+    grid-area: second;
+    background-color:tomato;
+}
+
+#most {
+    grid-area: most;
+    background-color:azure;
+}
+
+#box {
+    grid-area: box;
+    background-color:goldenrod;
+}
+
+#more {
+    grid-area: more;
+    background-color:floralwhite;
+}
+
+#footer {
+    grid-area: footer;
+    background-color:fuchsia;
+}
