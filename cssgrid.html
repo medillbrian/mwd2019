@@ -23,8 +23,8 @@
             
             // Handling JSON locally
             var txt = '{"name":"John", "age":30, "city":"New York"}';
-            var obj = JSON.parse(txt);
-            document.getElementById("main").innerHTML = obj.name + ", " + obj.age;
+            var items = JSON.parse(txt);
+            document.getElementById("main").innerHTML = items.name + ", " + items.age;
             
             // Handling JSON via the server. You'll need MAMP or WAMP for this to work.
             function loadJSON(callback) {   
@@ -41,9 +41,24 @@
                 xobj.send(null);  
              }
             
-            loadJSON(function(json) {
-                console.log(json); // this will log out the json object
-                console.log(json.appMenuLinks);
+            loadJSON(function(results) {
+                console.log(results); // this will list the response out as text
+                json = JSON.parse(results); // conver the text into json object
+                
+                console.log(json.topMenuLinks); // start to access individual objects
+                console.log(json.topMenuLinks[0].text); // see the item count
+                
+                // you can also loop through results
+                
+                var topmenu = json.topMenuLinks;
+                console.log(topmenu.length);
+                
+                for(var i = 0; i < topmenu.length; i++) {
+                                        
+                    var obj = topmenu[i];
+                    console.log(obj.text);
+                }
+                
             });
             
         </script>
