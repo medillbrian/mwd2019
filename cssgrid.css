@@ -1,3 +1,9 @@
+#container {
+    display:grid;
+    grid-gap: 10px;
+    grid-template-rows:auto;
+}
+
 #header {
     grid-area: header;
     background-color:aqua;
