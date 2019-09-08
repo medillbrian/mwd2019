@@ -21,6 +21,12 @@
         </div>
         <script>
             
+            // Handling JSON locally
+            var txt = '{"name":"John", "age":30, "city":"New York"}';
+            var obj = JSON.parse(txt);
+            document.getElementById("main").innerHTML = obj.name + ", " + obj.age;
+            
+            // Handling JSON via the server. You'll need MAMP or WAMP for this to work.
             function loadJSON(callback) {   
 
                 var xobj = new XMLHttpRequest();
@@ -35,21 +41,11 @@
                 xobj.send(null);  
              }
             
-            function init() {
-             loadJSON(function(response) {
-              // Parsing JSON string into object
-                var obj = JSON.parse(response);
-                 
-                console.log(obj.topMenuLinks);
-                // expected output: 42
-
-                console.log(obj.appMenuLinks);
-                // expected output: true 
-             });
-            }
+            loadJSON(function(json) {
+                console.log(json); // this will log out the json object
+                console.log(json.appMenuLinks);
+            });
             
-            init();
-
         </script>
     </body>
 </html>
