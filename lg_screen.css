@@ -1,5 +1,4 @@
 #container {
-    height:900px;
     grid-template-columns:200px 400px repeat(2, 200px);
     grid-template-areas: 
         "header header  header  header"
@@ -8,6 +7,4 @@
         "most   most    most    most"
         "more   more    more    sidebar2"
         "footer footer  footer  footer";
-    align-content:"stretch";
-    justify-content: space-evenly;
 }
