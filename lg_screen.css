@@ -1,5 +1,5 @@
 #container {
-    grid-template-columns:200px 400px repeat(2, 200px);
+    grid-template-columns:20% 20% repeat(2, 30%);
     grid-template-areas: 
         "header header  header  header"
         "main   main    main    sidebar"
